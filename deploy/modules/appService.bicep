@@ -20,6 +20,8 @@ param environmentType string
 var appServicePlanName = 'toy-product-launch-plan'
 var appServicePlanSkuName = (environmentType == 'prod') ? 'P2_v3' : 'F1'
 
+// Resources 
+
 resource appServicePlan 'Microsoft.Web/serverfarms@2022-03-01' = {
   name: appServicePlanName
   location: location
